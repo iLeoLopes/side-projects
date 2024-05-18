@@ -1,0 +1,106 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  background-color: black;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 60%;
+  width: 60%;
+  border: 15px solid #E62C03;
+  border-radius: 10px;
+  display: flex-box;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: auto;
+  box-shadow:
+     black 0px 0px 0px 6px,
+     rgba(253, 76, 0, 0.5) 1px 0px 20px 12px;
+}
+
+button {
+  left: 25%;
+  top: 20%;
+  right: 25%;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 11%;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  font-weight: bold;
+  width: 50%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+button:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 0px 10px 6px;
+}
+.resetButton {
+  width: 20%;
+  height: 7%;
+  left: 40%;
+  top: 25%;
+}
+.result {
+  width: 60%;
+  height: 30%;
+  color: white;
+  margin: 0 auto;
+  bottom: 20px;
+  font-family: OCR A Std, monospace;
+  font-size: 3vh;
+  font-weight: bolder;
+  border: 2px solid black;
+  border-radius: 10px;
+  /*background-color: #E62C03;*/
+  background-color: rgb(8, 6, 6);
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5em;
+  user-select: none;
+  box-shadow:
+     black 0px 0px 0px 4px,
+     rgba(253, 76, 0, 0.5) 0px 0px 10px 12px;
+}
+
+.cover {
+  color: white;
+  border: 4px solid black;
+  font-size: 5vh;
+}
