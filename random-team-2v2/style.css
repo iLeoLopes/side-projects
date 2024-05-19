@@ -15,8 +15,12 @@ html, body {
 .container {
   height: 60%;
   width: 60%;
-  border: 15px solid #E62C03;
-  border-radius: 10px;
+  border: double 1em transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(black, black), 
+                    linear-gradient(#FF7E31, #E62C03);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   display: flex-box;
   justify-content: center;
   margin-left: auto;
@@ -24,7 +28,7 @@ html, body {
   margin-top: 30px;
   margin-bottom: auto;
   box-shadow:
-     black 0px 0px 0px 6px,
+     black 0px 0px 1px 8px,
      rgba(253, 76, 0, 0.5) 1px 0px 20px 12px;
 }
 
@@ -42,6 +46,7 @@ button {
   align-items: center;
   justify-content: center;
   font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 0.9em;
   height: 11%;
   line-height: 40px;
   outline: 0;
@@ -65,10 +70,14 @@ button:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 0px 10px 6px;
 }
 .resetButton {
-  width: 20%;
+  width: 30%;
   height: 7%;
-  left: 40%;
+  left: 35.5%;
   top: 25%;
+  
+}
+button:active {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 0px 25px 6px;
 }
 .result {
   width: 60%;
@@ -76,13 +85,18 @@ button:hover {
   color: white;
   margin: 0 auto;
   bottom: 20px;
-  font-family: OCR A Std, monospace;
+  font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 3vh;
   font-weight: bolder;
-  border: 2px solid black;
-  border-radius: 10px;
-  /*background-color: #E62C03;*/
-  background-color: rgb(8, 6, 6);
+  border: double 0.19em transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(black, black), 
+                    linear-gradient(black, #E62C03, #FF7E31, black);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-color: rgba(9, 9, 9, 0.488);
+  /* background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03); */
   display: flex;
   position: relative;
   cursor: pointer;
@@ -95,12 +109,12 @@ button:hover {
   line-height: 1.5em;
   user-select: none;
   box-shadow:
-     black 0px 0px 0px 4px,
+     black 0px 0px 0px 5px,
      rgba(253, 76, 0, 0.5) 0px 0px 10px 12px;
 }
 
 .cover {
   color: white;
-  border: 4px solid black;
+  border: 4px solid E62C03;
   font-size: 5vh;
 }

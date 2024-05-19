@@ -2,20 +2,18 @@ const result = document.getElementsByClassName('result')[0];
 const getContainer = document.getElementsByClassName('container')[0];
 
 const showCover = () => {
-  result.innerHTML = "Random <br> 2v2";
+  result.innerHTML = "RANDOM <br> 2v2";
   result.setAttribute('class', 'result cover');
 };
 
 const createButton = (name) => {
   const button = document.createElement('button');
-  button.innerHTML = name;
+  button.innerHTML = (name).toLowerCase();
   getContainer.appendChild(button);
   button.setAttribute('class', `${name}Button`);
 };
 
 const randomTeamGenerator = () => {
-  result.setAttribute('class', 'result');
-
   const players = ['Leo', 'Bruno', 'Raphael', 'Gabriel', 'Nicolas', 'Pedro', 'Lucas'];
   let teamA = [];
   let teamB = [];
@@ -29,22 +27,26 @@ const randomTeamGenerator = () => {
       teamB.push(getRandomPlayer);
     }
   }
-  return result.innerHTML = 
-    `
-    ${teamA[0]} e ${teamA[1]}<br>
-                VS <br>
-    ${teamB[0]} e ${teamB[1]}
-     `
+  return  {teamA, teamB};
+};
+
+const showNextMatch = (randomTeamsArray) => {
+  result.setAttribute('class', 'result');
+  const teams = randomTeamsArray();
+
+  result.innerHTML = 
+  `${teams.teamA[0]} e ${teams.teamA[1]} <br>
+              VS <br>
+  ${teams.teamB[0]} e ${teams.teamB[1]}`
 };
 
 showCover();
-console.log(showCover());
 createButton('random');
-const randomButton = document.getElementsByTagName('button')[0];
+const randomButton = document.getElementsByClassName('randomButton')[0];
 
 createButton('reset');
 const resetButton = document.getElementsByClassName('resetButton')[0];
 
-randomButton.addEventListener('click', () => randomTeamGenerator());
+randomButton.addEventListener('click', () => showNextMatch(randomTeamGenerator));
 result.addEventListener('click', () => showCover());
 resetButton.addEventListener('click', () => showCover());
