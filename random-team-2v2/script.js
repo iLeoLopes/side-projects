@@ -14,7 +14,7 @@ const createButton = (name) => {
 };
 
 const randomTeamGenerator = () => {
-  const players = ['Leo', 'Bruno', 'Raphael', 'Gabriel', 'Nicolas', 'Pedro', 'Lucas'];
+  const players = ['Leo', 'Bruno', 'Raphael', 'Gabriel', 'Nicolas'];
   let teamA = [];
   let teamB = [];
 
@@ -30,14 +30,22 @@ const randomTeamGenerator = () => {
   return  {teamA, teamB};
 };
 
-const showNextMatch = (randomTeamsArray) => {
+const showNextMatch = (randomTeamsObject) => {
   result.setAttribute('class', 'result');
-  const teams = randomTeamsArray();
+  const teams = randomTeamsObject();
 
   result.innerHTML = 
   `${teams.teamA[0]} e ${teams.teamA[1]} <br>
               VS <br>
   ${teams.teamB[0]} e ${teams.teamB[1]}`
+};
+
+const showRandomAnimation = () => {
+  for(let i = 0; i < 250; i++) {
+    setTimeout(() => {
+      showNextMatch(randomTeamGenerator)
+    }, i * 11);
+  }
 };
 
 showCover();
@@ -47,6 +55,6 @@ const randomButton = document.getElementsByClassName('randomButton')[0];
 createButton('reset');
 const resetButton = document.getElementsByClassName('resetButton')[0];
 
-randomButton.addEventListener('click', () => showNextMatch(randomTeamGenerator));
+randomButton.addEventListener('click', () => showRandomAnimation());
 result.addEventListener('click', () => showCover());
 resetButton.addEventListener('click', () => showCover());
