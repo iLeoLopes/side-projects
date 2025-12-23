@@ -86,7 +86,7 @@ button:active {
   margin: 0 auto;
   bottom: 20px;
   font-family: 'Arial Narrow', Arial, sans-serif;
-  font-size: 3vh;
+  font-size: 2.3vh;
   font-weight: bolder;
   border: double 0.19em transparent;
   border-radius: 20px;
@@ -116,5 +116,5 @@ button:active {
 .cover {
   color: white;
   border: 4px solid E62C03;
-  font-size: 5vh;
+  font-size: 3.4vh;
 }
